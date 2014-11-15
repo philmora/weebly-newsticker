@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 5.5.1 (402628)"/><meta name="altitude" content="8.494736671447754"/><meta name="author" content="philippe mora"/><meta name="created" content="2014-11-15 19:40:17 +0000"/><meta name="latitude" content="37.54565479780219"/><meta name="longitude" content="-122.0119007402159"/><meta name="updated" content="2014-11-15 20:44:44 +0000"/><title>Weebly Ticker [07/14/14]</title></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div><b>Javascript/jquery News Ticker for Weebly</b></div>
+<div>
+<hr/>
+<br/></div>
+<div>Adapted By Phil Mora (philmora.com + <a href="http://toppgun.net">toppgun.net</a> + <a href="http://philippemora.net">philippemora.net</a>) for The Weebly Platform<br/></div>
+<div><br/></div>
+<div>e: <a href="mailto:phil@toppgun.net">phil@toppgun.net</a></div>
+<div>t: @orsusvirtum</div>
+<div>f: <a href="http://github.com/toppgun">github.com/toppgun</a></div>
+<div><br/></div>
+<div>(c) July 2014</div>
+<div><br/></div>
+<div><b>Original Credits</b></div>
+<div>
+<hr/>
+<br/></div>
+<div>Copyright 2013, <a href="http://jQuery.Org">jQuery.Org</a>
+<div>Free to use under the MIT license.</div>
+<div><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a></div>
+<div><br/></div>
+<div>Other credits: Lea Veroux (prism.js), Nick Downie (Chart.js) and Risq (jquery.newsTicker.js)</div>
+<div>All released under the MIT license</div>
+<div>bootstrap.css and bootstrap.js copyrighted by twitter and released under the apache license<br/></div>
+</div>
+<div> </div>
+<div><br/></div>
+<div>
+<hr/></div>
+<div><b>Weebly Installation Instructions</b></div>
+<div>
+<hr/>
+<br/></div>
+<div><u>1. Upload the following files to your weebly website (Design -&gt; HTML -&gt; add files)</u></div>
+<div><br/></div>
+<div>
+<ul>
+<li>bootstrap.css<br/></li>
+<li>bootstrap.js<br/></li>
+<li>chart.js<br/></li>
+<li>jquery.mCustomScrollbar.min.js<br/></li>
+<li>jQuery.mousewheel.min.js<br/></li>
+<li>jquery.newsTicker.js<br/></li>
+<li>prism.js<br/></li>
+</ul>
+</div>
+<div><br/></div>
+<div><u>2. Open weebly.html and Follow all instructions inlined inside </u></div>
+<div><br/></div>
+<div>&lt;!--
+<div>  *</div>
+<div>  * Instructions 1:</div>
+<div>  *</div>
+<div>  * Cut and Paste the following code inside main-style.css on weebly (design -&gt; edit html)</div>
+<div>  * anywhere within the page that will feature the newsticker</div>
+<div>  *</div>
+<div>  *</div>
+<div>  * You can change the news ticker font by modifying the "font-family" variable</div>
+<div>  * And because of potential bootstrap.css issues conflicting with main-style.css, you may want</div>
+<div>  * to tweak "font-size"</div>
+<div>  *</div>
+<div>  *</div>
+<div>  * Examples at <a href="http://philmora.com">philmora.com</a> and <a href="http://toppgun.net">toppgun.net</a></div>
+<div>  *</div>
+<div>  *</div>
+<div>  --&gt;</div>
+<div> </div>
+<div> </div>
+<div>//-------------------------------------------------------------</div>
+<div>// Cut and Paste This Code Into Weebly Container Object</div>
+<div>//-------------------------------------------------------------</div>
+<div> </div>
+<div> </div>
+<div>#nt-title-container {</div>
+<div>     /* background: #F2F2F2;*/</div>
+<div>}</div>
+<div><br/></div>
+<div>#nt-title {</div>
+<div>}</div>
+<div><br/></div>
+<div>#nt-title li {</div>
+<div>    font-family: 'Source Sans Pro', sans-serif;</div>
+<div>     font-weight: 100;</div>
+<div>     font-size: 30px;</div>
+<div>     color: #000000;</div>
+<div>     white-space: nowrap;</div>
+<div>     list-style: none;</div>
+<div>     overflow: hidden;</div>
+<div>     text-overflow: ellipsis;</div>
+<div>}</div>
+<div><br/></div>
+<div>//-------------------------------------------------------------</div>
+<div>// End Cut And Paste</div>
+<div>//-------------------------------------------------------------</div>
+<div><br/></div>
+<div> </div>
+<div> </div>
+<div>  &lt;!--</div>
+<div>  *</div>
+<div>  * Instructions 2:</div>
+<div>  *</div>
+<div>  * Cut and Paste the following code inside the &lt;header&gt; of the page on weebly </div>
+<div>  * that will feature the newsticker</div>
+<div>  *</div>
+<div>  *</div>
+<div>  --&gt;</div>
+<div> </div>
+<div> </div>
+<div> &lt;link rel="stylesheet" type="text/css" href="files/theme/bootstrap.css" /&gt;</div>
+<div> </div>
+<div> </div>
+<div> </div>
+<div> &lt;!--</div>
+<div>  *</div>
+<div>  * Instructions 3:</div>
+<div>  *</div>
+<div>  * Cut and Paste the following code inside an HTML object</div>
+<div>  * anywhere within the page that will feature the newsticker</div>
+<div>  *</div>
+<div>  *</div>
+<div>  * Note that the font color and size are modified in the CSS however</div>
+<div>  * the alignment can be modified below as well due to CSS conflicts inherent to the</div>
+<div>  * weebly platform. You may want to do some tune up below with the row_height variable</div>
+<div>  * depending on the font you're using and how much you've customized bootstrap.css</div>
+<div>  *</div>
+<div>  *</div>
+<div>  * Examples at <a href="http://philmora.com">philmora.com</a> and <a href="http://toppgun.net">toppgun.net</a></div>
+<div>  *</div>
+<div>  * Please note that bootstrap.css has some weird effect on tablets, especially if you have</div>
+<div>  * an animated gif background on a splash page - will fix later (November 2014)</div>
+<div>  *</div>
+<div>  *</div>
+<div>  --&gt;</div>
+<div><br/></div>
+<div>&lt;head&gt;</div>
+<div>&lt;meta charset="UTF-8"&gt;</div>
+<div>&lt;title&gt;Single Line Weebly News Ticker &lt;/title&gt;</div>
+<div>&lt;/head&gt;</div>
+<div><br/></div>
+<div>&lt;body&gt;</div>
+<div><br/></div>
+<div>//-------------------------------------------------------------</div>
+<div>// Cut and Paste This Code Into Weebly Container Object</div>
+<div>//-------------------------------------------------------------</div>
+<div><br/></div>
+<div>&lt;div id="nt-title-container"&gt;</div>
+<div>                            </div>
+<div>&lt;ul id="nt-title"&gt;</div>
+<div>&lt;li&gt; this is news ticker line 1 &lt;/li&gt;</div>
+<div>&lt;li&gt; this is news ticker line 2 &lt;/li&gt;</div>
+<div>&lt;li&gt; this is news ticker line 3 &lt;/li&gt;</div>
+<div>&lt;li&gt; this is news ticker line 4 &lt;/li&gt;</div>
+<div>&lt;/ul&gt;                            </div>
+<div><br/></div>
+<div>&lt;/div&gt;</div>
+<div><br/></div>
+<div>&lt;script src='<a href="http://code.jquery.com/jquery-1.10.2.min.js">http://code.jquery.com/jquery-1.10.2.min.js</a>'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/chart.js'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/bootstrap.js'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/prism.js'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/jquery.mCustomScrollbar.min.js'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/jquery.newsTicker.js'&gt;&lt;/script&gt;</div>
+<div>&lt;script src='files/theme/jquery.mousewheel.min.js'&gt;&lt;/script&gt;</div>
+<div><br/></div>
+<div>&lt;script&gt;</div>
+<div><br/></div>
+<div>jQuery(function($) {</div>
+<div>     $(window).load(function(){</div>
+<div>                 $('code.language-javascript').mCustomScrollbar();</div>
+<div>             });</div>
+<div>            var nt_title = $('#nt-title').newsTicker({</div>
+<div>                row_height: 40,</div>
+<div>                max_rows: 1,</div>
+<div>                duration: 3000,</div>
+<div>                pauseOnHover: 0</div>
+<div>            });</div>
+<div><br/></div>
+<div>});</div>
+<div><br/></div>
+<div>&lt;/script&gt;</div>
+<div><br/></div>
+<div><br/></div>
+<div>//-------------------------------------------------------------</div>
+<div>// End Cut And Paste</div>
+<div>//-------------------------------------------------------------</div>
+</div>
+</body></html>
